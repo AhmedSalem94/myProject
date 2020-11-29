@@ -250,3 +250,30 @@ setInterval(function x(){
 },4000);
 
 //End setInterval
+
+
+
+let  myRequest = new XMLHttpRequest();
+
+
+myRequest.onreadystatechange =function(){
+	
+	if(this.readyState === 4 && this.status ===200){
+			
+			let y = JSON.parse(this.myRequest);
+			
+	}
+
+};
+myRequest.open('GET','https://ahmedsalem94.github.io/myProject/O.json',true);
+myRequest.setRequestHeader("content-type","https://ahmedsalem94.github.io/myProject/O.json");
+myRequest.send();
+
+			
+let man =y.name;
+let many =y.aga;										
+	
+	let by = document.querySelector('.jsony');
+	by.textContent = man + " : " + many; 
+console.log(by);
+console.log(many);
